@@ -30,7 +30,7 @@ export default Ember.Route.extend({
   // mystore: Ember.inject.service('mystore'),
   setupController(controller, model) {
     this._super(controller, model);
-    let params = this.get('params');
+    const params = this.get('params');
     controller.set('start', params.start);
     controller.set('end', params.end);
     controller.set('start_date', moment(new Date(params.start)).format('MM/DD/YYYY'));
@@ -41,14 +41,6 @@ export default Ember.Route.extend({
   actions: {
     loadData(url) {
       this.transitionTo(url);
-    }
-  }
+    },
+  },
 });
-
-
-
-
-
-
-
-

@@ -3,12 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'table',
   classNames: ['table'],
-  sort_by: "default",
-  sorted_model: Ember.computed('model', 'sort_by', function() {
-    switch(this.get('sort_by')) {
-      case "boards":
+  sort_by: 'default',
+  sorted_model: Ember.computed('model', 'sort_by', function () {
+    switch (this.get('sort_by')) {
+      case 'boards':
         return this.get('model').sortBy('boards', 'DimensionName').reverse();
-      case "boardfeet":
+      case 'boardfeet':
         return this.get('model').sortBy('boardfeet', 'DimensionName').reverse();
       default:
         return this.get('model');
@@ -23,6 +23,6 @@ export default Ember.Component.extend({
   actions: {
     sort_data(column) {
       this.set('sort_by', column);
-    }
-  }
+    },
+  },
 });

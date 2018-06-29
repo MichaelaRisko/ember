@@ -12,5 +12,5 @@ export default Ember.Controller.extend({
   // boardfeets: Ember.computed.mapBy('model', 'boardfeet'),
   // total_boardfeet: Ember.computed.sum('boardfeets'),
   // max_boardfeet: Ember.computed.max('boardfeets')
-  test: 1
+  test: 1,
 });

@@ -47,6 +47,12 @@
     "ember-route-action-helper": "2.0.1",
     "ember-truth-helpers": "1.2.0",
     "ember-welcome-page": "^1.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "loader.js": "^4.0.1"
   }
 }

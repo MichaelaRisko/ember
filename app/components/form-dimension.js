@@ -7,11 +7,11 @@ export default Ember.Component.extend({
       this.set('editing', true);
     },
     save() {
-      //save something to the server
+      // save something to the server
       this.set('editing', false);
     },
     cancel() {
       this.set('editing', false);
-    }
-  }
+    },
+  },
 });
