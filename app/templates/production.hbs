@@ -6,7 +6,11 @@
   load=(route-action 'loadData')
 }}
 
-<h2>Production</h2>
+<h2>
+  {{#link-to 'production' start end}}
+  Production from {{unbound start_time}} to {{unbound end_time}}
+{{/link-to}}
+</h2>
 
 
 
