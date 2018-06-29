@@ -7,9 +7,9 @@ export default Ember.Component.extend({
   sorted_model: Ember.computed('model', 'sort_by', function(){
     switch (this.get('sort_by')) {
       case "boards":
-        return this.get('model').sort_by('boards', 'DimensionName').reverse();
+        return this.get('model').sortBy('boards', 'DimensionName').reverse();
       case "boardfeet":
-        return this.get('model').sort_by('boardfeet', 'DimensionName').reverse();
+        return this.get('model').sortBy('boardfeet', 'DimensionName').reverse();
       default:
         return this.get('model');
     }
@@ -17,7 +17,7 @@ export default Ember.Component.extend({
   boards: Ember.computed.mapBy('model', 'boards'),
   total_boards: Ember.computed.sum('boards'),
   max_boards: Ember.computed.max('boards'),
-  boardfeets: Ember.computed.mapBy('model', 'boardsfeet'),
+  boardfeets: Ember.computed.mapBy('model', 'boardfeet'),
   total_boardfeet: Ember.computed.sum('boardfeets'),
   max_boardfeet: Ember.computed.max('boardfeets'),
   actions: {

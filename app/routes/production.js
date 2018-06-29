@@ -5,30 +5,29 @@ import moment from 'moment';
 
 export default Ember.Route.extend({
 
-  model(params){
-  /*
-  return{
-    "ProductName":"Ponderosa",
-    "DimensionName":"1\" X4\" X 14'",
-    "BoardsSum": 20,
-    "BoardFeetSum": 10000
-  }
-  */
-  this.set('params', params);
-//   return new Promise(function(resolve){
-//     setTimeout(function(){
-//       let data = Ember.$.getJSON(`/data/production.json?start=${params.start}&end=${params.end}`);
-//       data.then(function(data){
-//         let records = [];
-//         data.forEach(function(item){
-//           records.push( Production.create(item));
-//         });
-//         resolve(records);
-//       })
-//     }, 400);
-//   });
-  return this.get('mystore').production(params.start, params.end);
- },
+    model(params) {
+      // return {
+      //   "ProductName": "Ponderosa",
+      //   "DimensionName": "1\" X 4\" X 14'",
+      //   "BoardsSum": 20,
+      //   "BoardFeetSum": 10000
+      // }
+      // return Ember.$.getJSON(`/data/production.json?start=${params.start}&end=${params.end}`);
+      this.set('params', params);
+      // return new Promise(function(resolve) {
+      //   setTimeout(function() {
+      //     let data = Ember.$.getJSON(`/data/production.json?starts_at=${params.start}&ends_at=${params.end}`);
+      //     data.then(function(data) {
+      //       let records = [];
+      //       data.forEach(function(item) {
+      //         records.push( Production.create(item) );
+      //       });
+      //       resolve(records);
+      //     });
+      //   }, 400);
+      // });
+      return this.get('mystore').production(params.start, params.end);
+    },
 
 //mystore: Ember.inject.service('mystore'),
 
@@ -46,10 +45,9 @@ setupController(controller, model) {
 },
 
 actions: {
-  loadData: function(){
+  loadData(url){
     this.transitionTo(url);
   }
 }
-
 
 });

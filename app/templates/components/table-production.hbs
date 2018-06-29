@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="total">
       <td>All Dimensions</td>
       <td>{{total_boards}}</td>
       <td>{{format-number total_boardfeet precision=2}}</td>
@@ -20,7 +20,7 @@
       <tr class="{{row-class row}}">
         <td>
           {{#link-to "production.dimension" row.DimensionID}}
-            {{row.DimensionName.length}}
+            {{row.DimensionName}}
           {{/link-to}}
         </td>
         <td class="quantity">{{row.boards}}</td>

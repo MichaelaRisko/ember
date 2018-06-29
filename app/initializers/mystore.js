@@ -3,6 +3,6 @@ export function initialize( application) {
 }
 
 export default {
-  name: 'mystore'
+  name: 'mystore',
   initialize
  };

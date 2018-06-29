@@ -9,7 +9,7 @@ export default Ember.Service.extend({
       json.forEach(function(item){
         records.push( Production.create(item));
       });
-      this.set('data', records)
+      this.set('data', records);
       return records;
     });
   },
