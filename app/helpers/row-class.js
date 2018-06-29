@@ -7,6 +7,7 @@ export function rowClass(params/*, hash*/) {
     if (row.Boards === 0 || row.BoardsSum === 0) {
       class_names.push("zero");
     }
+    //other conditions
 
     return class_names.join(" ");
   }

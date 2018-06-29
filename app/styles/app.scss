@@ -102,7 +102,7 @@ nav.title {
     h1 {
         font-size: 33px;
         line-height: 70px;
-        text-shadow: 1px 1px 0px rgba(255,255,255,0.3), -1px -1px 0px rgba(0,0,0,0.4);
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.3), -1px -1px 0px rgba(0,0,0,0.4);   
         margin: 16px 0 0 0;
     }
 }
@@ -169,13 +169,13 @@ table.table {
             }
         }
         &.added {
-            background-color: #d9eacd;
+            background-color: #d9eacd; 
             &:nth-child(odd) {
                 background-color: #e1f2d5;
             }
         }
         &.changed {
-            background-color: #ffffaa;
+            background-color: #ffffaa; 
             &:nth-child(odd) {
                 background-color: #ffffcc;
             }

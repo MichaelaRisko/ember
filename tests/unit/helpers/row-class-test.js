@@ -1,4 +1,3 @@
-
 import { rowClass } from 'loopylog/helpers/row-class';
 import { module, test } from 'qunit';
 
@@ -9,4 +8,3 @@ test('it works', function(assert) {
   let result = rowClass([42]);
   assert.ok(result);
 });
-
