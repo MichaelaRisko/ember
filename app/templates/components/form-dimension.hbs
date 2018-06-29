@@ -1,0 +1,25 @@
+{{#if editing}}
+
+<span class="form dirty">
+  <p>Dimension: {{input value=model.DimensionName}}</p>
+  <p>Board: {{input value=model.boards}}</p>
+  <p>BoardFeet: {{input value=model.boardsfeet}}</p>
+  <p>
+    <span {{action 'save'}}><button>save</button></span>
+    <span {{action 'cancel'}}><button>cancel</button></span>
+  </p>
+</span>
+{{else}}
+<span class="form">
+  <p>Dimension: {{model.DimensionName}}</p>
+  <p>Board: {{model.boards}}</p>
+  <p>BoardFeet: {{model.boardsfeet}}</p>
+  <p>
+
+    <span {{action 'edit'}}><button>pencil</button></span>
+
+  </p>
+</span>
+
+
+{{/if}}

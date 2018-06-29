@@ -1,0 +1,38 @@
+<table>
+  <thead>
+    <tr>
+      {{table-th name="Dimension"}}
+      {{table-th name="Boards"}}
+      {{table-th name="BoardFeet"}}
+      {{#table-th}}{{!fa-icon "cogs"}}
+        miska
+      {{/table-th}}
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>All Dimensions</td>
+      <td>{{total_boards}}</td>
+      <td>{{format-number total_boardfeet precision=2}}</td>
+      <td>{{max_boardfeet}}</td>
+    </tr>
+    {{#each model as |row|}}
+      <tr class="{{row-class row}}">
+        <td>
+          {{#link-to "production.dimension" row.DimensionID}}
+            {{row.DimensionName.length}}
+          {{/link-to}}
+        </td>
+        <td class="quantity">{{row.boards}}</td>
+        <td class="quantity">{{format-number row.boardsfeet precision=2}}</td>
+        <td>{{!  <input type="checkbox" disabled={{eq row.boards 0}}> }}
+
+          {{#link-to "production.dimension" row.DimensionID}}
+          <button>search</button>
+          {{/link-to}}
+
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
