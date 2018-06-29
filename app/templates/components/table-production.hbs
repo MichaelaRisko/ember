@@ -1,9 +1,9 @@
 <table>
   <thead>
     <tr>
-      {{table-th name="Dimension"}}
-      {{table-th name="Boards"}}
-      {{table-th name="BoardFeet"}}
+      {{table-th current_sort=sort_by name="Dimension" sort_by="default" sort_data=(action 'sort_data')}}
+      {{table-th current_sort=sort_by name="Boards" sort_by="boards" sort_data=(action 'sort_data')}}
+      {{table-th current_sort=sort_by name="BoardFeet" sort_by="boardfeet" sort_data=(action 'sort_data')}}
       {{#table-th}}{{!fa-icon "cogs"}}
         miska
       {{/table-th}}
@@ -16,7 +16,7 @@
       <td>{{format-number total_boardfeet precision=2}}</td>
       <td>{{max_boardfeet}}</td>
     </tr>
-    {{#each model as |row|}}
+    {{#each sorted_model as |row|}}
       <tr class="{{row-class row}}">
         <td>
           {{#link-to "production.dimension" row.DimensionID}}
